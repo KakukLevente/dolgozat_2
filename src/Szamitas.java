@@ -1,14 +1,18 @@
+//Kakuk Levente
+//Szoft/1/N
+//2023.04.27
+
 import java.util.Scanner;
 
 public class Szamitas {
 
     public Szamitas() {}
     public void startSzamitas() {
-        double tenyleges =  this.bekerDatas();
-        nyomtat(tenyleges);
+        double terfogat =  this.bekerDatas();
+        nyomtat(terfogat);
     }
-    private void nyomtat(double tenyleges) {
-        System.out.println(tenyleges);
+    private void nyomtat(double terfogat) {
+        System.out.println(terfogat);
     }
     private double bekerDatas() {
         String a_oldalStr = beker("A oldal: ");        
@@ -30,17 +34,17 @@ public class Szamitas {
         double a_oldal = Double.parseDouble(a_oldalStr);
         double b_oldal = Double.parseDouble(b_oldalStr);
         double c_oldal = Double.parseDouble(c_oldalStr);
-        double tenyleges = this.szamitTenylegesKamat(a_oldal, b_oldal, c_oldal);
-        return tenyleges;
+        double terfogat = this.szamitTerfogat(a_oldal, b_oldal, c_oldal);
+        return terfogat;
     }
     private String beker(String msg) {
         Scanner scanner = new Scanner(System.in);
         System.out.print(msg);
         return scanner.nextLine();
     }
-    public double szamitTenylegesKamat(double a_oldal, double b_oldal, double c_oldal) {
-        double tenyleges = a_oldal*b_oldal*c_oldal;
-        return tenyleges;
+    public double szamitTerfogat(double a_oldal, double b_oldal, double c_oldal) {
+        double terfogat = a_oldal*b_oldal*c_oldal;
+        return terfogat;
     }
     public boolean checkInput(String input) {
         if(input.matches("[0-9.]+")) {
